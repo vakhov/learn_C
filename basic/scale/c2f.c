@@ -5,13 +5,12 @@
 int main()
 {
     float fahr, celsius;
-    int lower, upper;
-    char* step;
+    int lower, upper, step;
 
     lower = 0;  // bottom line
     upper = 100;    // upper bound
     printf("Set step (int): ");
-    scanf("%s", step);  // step size
+    scanf("%d", &step);  // step size
 
     celsius = lower;
     printf("Celsius\tFahrenheit\n");
@@ -19,7 +18,7 @@ int main()
     {
         fahr = (celsius * 9.0) / 5.0 + 32.0;
         printf("%4.1f\t%5.1f\n", celsius, fahr);
-        celsius += atoi(step);
+        celsius += step;
     }
     
 
