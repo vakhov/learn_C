@@ -1,8 +1,6 @@
 // Вывод входного потока в новой строке
 #include <stdio.h>
-#define WHITE_SPACE ' '
-#define NEW_LINE    '\n'
-#define TAB         '\t'
+#include "main.h"
 
 int main()
 {
@@ -12,7 +10,7 @@ int main()
         if (c == WHITE_SPACE || c == NEW_LINE || c == TAB)
             printf("\n");
         else
-            printf("%c", c);
+            putchar(c);
     }
 
     return 0;
